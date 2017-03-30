@@ -1,31 +1,25 @@
-data <- read.csv('Data Sets/K9.data', header = FALSE, stringsAsFactors = FALSE, na.strings = "?");
+#Script loads p53 genome data and runs boruta feature selection to determine important attributes
+library(Boruta);
+setwd("~/git/cse5522/");
+source("p53_problem.R");
 
-print('Number of inactive:')
+data <- read.csv('Data Sets/K9.data', header = F, stringsAsFactors = F, na.strings = "?");
+
+print('Number of inactive:');
 print(length(data[data[,5409] == 'inactive', 5409]));
-print('Number of active:')
+print('Number of active:');
 print(length(data[data[,5409] == 'active', 5409]));
 
-samples <- length(data[,5409]);
-x <- 1:samples;
-y <- 1:5409;
+names(data) <- gsub("?", "", names(data));
 
-active_locations <- x[data[,5409] == 'active'];
+data[data == ""] <- NA;
 
+data <- data[colSums(!is.na(data)) >0]
+data <- data[complete.cases(data),]
 
-subdata <- data[1:20, 1:5408]; # Grab a subset of the data
+convert <- c(2:6, 11:13);
+data[,convert] <- data.frame(apply(data[convert],2,as.factor));
 
-
-# Remove any constant (or zero) columns 
-# df[,apply(df, 2, var, na.rm=TRUE) != 0]
-# df[,sapply(df, function(v) var(v, na.rm=TRUE)!=0)]
-#names(subdata[, sapply(subdata, function(v) var(v, na.rm=TRUE)==0)])
-
-# Remove constant / zero columns
-nonzero.sub <- subdata[, sapply(subdata, function(v) var(v, na.rm=TRUE)!=0)]
-
-# Remove samples with missing values
-nonzero.sub <- nonzero.sub[complete.cases(nonzero.sub), ]
-pca.subdata <- prcomp(nonzero.sub, center = TRUE, scale. = TRUE)
-
-
-#write.table(nonzero.sub, file='tmp.csv')
+set.seed(123);
+boruta.train <- Boruta(V1~.-V5409, data = data[1:100,], doTrace=2);
+print(boruta.train);
