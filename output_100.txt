@@ -13,7 +13,7 @@ Parameters:
     epsilon:  0.1 
 
 
-Number of Support Vectors:  401
+Number of Support Vectors:  355
 
 [1] "Percent training error for standard svm on normal data = 0"
 [1] "Principal Component analysis complete."
@@ -26,27 +26,27 @@ Parameters:
    SVM-Type:  eps-regression 
  SVM-Kernel:  radial 
        cost:  1 
-      gamma:  0.0003205128 
+      gamma:  0.0003216468 
     epsilon:  0.1 
 
 
-Number of Support Vectors:  3120
+Number of Support Vectors:  3102
 
 [1] "Percent training error for svm on PCA data = 0"
 [1] "Training classification of positive points on normal data"
-    16743      1494     28552     11763      2921      5515      3821      6870      6478      5625     16683     16769 
-5.6380281 5.5070803 6.2943145 1.8010478 3.0235598 2.9657760 0.8161001 0.7798412 0.9238201 3.2738834 4.4985918 0.8703118 
-     6484      5353     16677 
-3.3170336 4.2979423 6.5977477 
+    11156      5224      6485     16736     11763      1126      6557     16714     16715     16769      6634      1108 
+5.9648661 5.3701299 9.4288648 4.0972222 1.8954635 7.8677740 4.1708495 7.8208830 5.7786732 0.7079358 9.8687538 7.6877452 
+     5178      6494      1922 
+3.3796554 9.7564530 4.8625082 
 [1] "Training classification of positive points on PCA data"
-   16743     1494    28552    11763     2921     5515     3821     6870     6478     5625    16683    16769     6484     5353 
-5.769820 5.781051 5.763440 5.775783 5.775028 5.764762 5.769466 5.751495 5.779673 5.762281 5.789226 5.761770 5.776224 5.775920 
-   16677 
-5.772555 
+   11156     5224     6485    16736    11763     1126     6557    16714    16715    16769     6634     1108     5178     6494 
+5.779202 5.867363 5.727474 5.825862 5.869620 5.780492 5.783812 5.738616 5.764438 5.857472 5.786651 5.783476 5.795285 5.790157 
+    1922 
+5.767501 
 [1] "Sensitivity of normal svm = 1"
 [1] "Sensitivity of pca svm = 1"
 [1] "number of active samples = 30 number of inactive samples = 6253 (before filtering)"
-[1] "Percent testing error for standard svm on normal data = 0.00176536671481303"
-[1] "Percent testing error for svm on PCA data = 0.00449366072861499"
-[1] "Testing sensitivity of normal svm = 0.633333333333333"
-[1] "Testing sensitivity of pca svm = 0.0666666666666667"
+[1] "Percent testing error for standard svm on normal data = 0.00160565189466924"
+[1] "Percent testing error for svm on PCA data = 0.00433526011560694"
+[1] "Testing sensitivity of normal svm = 0.666666666666667"
+[1] "Testing sensitivity of pca svm = 0.1"
