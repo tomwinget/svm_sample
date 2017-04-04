@@ -1,0 +1,52 @@
+[1] "Hyperparameter value is = 2"
+[1] "number of active samples = 15 number of inactive samples = 3126 (before filtering)"
+
+Call:
+svm.default(x = nonzero.sub, y = l2)
+
+
+Parameters:
+   SVM-Type:  eps-regression 
+ SVM-Kernel:  radial 
+       cost:  1 
+      gamma:  0.0001849112 
+    epsilon:  0.1 
+
+
+Number of Support Vectors:  401
+
+[1] "Percent training error for standard svm on normal data = 0.00480769230769231"
+[1] "Principal Component analysis complete."
+
+Call:
+svm.default(x = pca.points, y = l2)
+
+
+Parameters:
+   SVM-Type:  eps-regression 
+ SVM-Kernel:  radial 
+       cost:  1 
+      gamma:  0.0003205128 
+    epsilon:  0.1 
+
+
+Number of Support Vectors:  3120
+
+[1] "Percent training error for svm on PCA data = 0.00480769230769231"
+[1] "Training classification of positive points on normal data"
+     16743       1494      28552      11763       2921       5515       3821       6870       6478       5625      16683 
+-0.8028308 -0.8067204 -0.7833372 -0.9168006 -0.8804883 -0.8822047 -0.9460564 -0.9471334 -0.9428568 -0.8730530 -0.8366755 
+     16769       6484       5353      16677 
+-0.9444462 -0.8717713 -0.8426354 -0.7743243 
+[1] "Training classification of positive points on PCA data"
+     16743       1494      28552      11763       2921       5515       3821       6870       6478       5625      16683 
+-0.7989162 -0.7985826 -0.7991057 -0.7987391 -0.7987615 -0.7990665 -0.7989267 -0.7994605 -0.7986236 -0.7991402 -0.7983398 
+     16769       6484       5353      16677 
+-0.7991553 -0.7987260 -0.7987351 -0.7988350 
+[1] "Sensitivity of normal svm = 0"
+[1] "Sensitivity of pca svm = 0"
+[1] "number of active samples = 30 number of inactive samples = 6253 (before filtering)"
+[1] "Percent testing error for standard svm on normal data = 0.00481463649494463"
+[1] "Percent testing error for svm on PCA data = 0.00481463649494463"
+[1] "Testing sensitivity of normal svm = 0"
+[1] "Testing sensitivity of pca svm = 0"

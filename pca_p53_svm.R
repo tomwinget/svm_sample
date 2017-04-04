@@ -2,7 +2,7 @@
 # install.packages('rpart')
 
 
-hyperparameter  <- 30;
+hyperparameter  <- 20;
 sink(gsub(' ', '', paste('output_', hyperparameter, '.txt')))
 print(paste('Hyperparameter value is =', hyperparameter))
 if(!exists("relabel", mode="function")) source("pca_util.R")
