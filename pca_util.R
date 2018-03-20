@@ -12,6 +12,13 @@ relabel <- function (x) {
   return (-1);
 }
 
+rerelabel <- function (x){
+  if (x!='-1'){
+    return (hyperparameter);
+  }
+  return (-1);
+}
+
 error <- function (x, y) {
   # x is approximation
   # y is correct label
